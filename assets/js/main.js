@@ -29,13 +29,20 @@ const linkAction = () =>{
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== ADD BLUR TO HEADER ===============*/
-const blurHeader = () =>{
-      const header = document.getElementById('header')
-      // Add a class if the bottom offset is greater than 50 of the viewport
-      this.scrollY >= 50 ? header.classList.add('blur-header') 
-                         : header.classList.remove('blur-header')
+const blurHeader = () => {
+    const header = document.getElementById('header');
+    
+    // Add a class if the bottom offset is greater than 50 of the viewport
+    if (window.scrollY >= 50) {
+      header.classList.add('blur-header');
+      header.classList.add('dark-text'); // Add this line to change text color to black
+    } else {
+      header.classList.remove('blur-header');
+      header.classList.remove('dark-text'); // Add this line to revert text color
+    }
   }
-  window.addEventListener('scroll', blurHeader)
+
+  window.addEventListener('scroll', blurHeader);
 
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{

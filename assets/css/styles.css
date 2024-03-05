@@ -136,6 +136,11 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-text {
+  color: black !important;
 }
 
 .nav {
@@ -206,9 +211,9 @@ img {
   position: absolute;
   width: 1000%;
   height: 100%;
-  background-color: hsla(0, 0%, 0%, .3);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  color: black !important;
+  background-color: hsla(0, 0%, 63%, 0.11);
+
   top: 0;
   left: 0;
   z-index: -1;
@@ -251,8 +256,9 @@ img {
   left: 0;
   width: 100%;
   height: 800px;
+
   background: linear-gradient(180deg,
-      hsla(0, 0%, 0%, 0)58%,
+      hsla(0, 0%, 15%, 0.352)58%,
       hsl(0, 0%, 0%)78%);
 }
 
@@ -267,7 +273,8 @@ img {
 }
 
 .home__subtitle {
-  font-size: var(--h3-font-size);
+  font-size: 2rem;
+  font-weight: 800;
   margin-bottom: .5rem;
 }
 
@@ -279,6 +286,7 @@ img {
 .home__description {
   margin-bottom: 2rem;
   color: var(--title-color);
+  font-size: 1rem;
 }
 
 .home__cards {
